@@ -14,6 +14,10 @@ public class Person {
     Sex gender;
     String email;
 
+    public Person(){
+
+    }
+
 
     public Person(String name, LocalDate birthdate, Sex gender, String email) {
         this.name = name;

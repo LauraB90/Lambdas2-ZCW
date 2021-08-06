@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Lambdas2-ZCW" target="11" />
+      <module name="Lambdas2-ZCW" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
