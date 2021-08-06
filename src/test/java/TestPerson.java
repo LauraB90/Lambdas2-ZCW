@@ -2,6 +2,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestPerson {
 
@@ -114,6 +116,17 @@ public class TestPerson {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void printWithAgeRangeTest(){
 
+        List<Person> listina = new ArrayList<>();
+        Person.printPersonsWithinAgeRange(listina, 18, 30);
+        Person jhope = new Person("hobi", cumple2, Person.Sex.MALE, "cute@email" );
+        Person yo = new Person("laura", cumple, Person.Sex.FEMALE, "email@email");
+
+        Assert.assertTrue(jhope.getAge() > 12 && jhope.getAge() < 40);
+        Assert.assertTrue(yo.getAge() > 17 && yo.getAge() < 31);
+
+    }
 
 }
