@@ -129,4 +129,17 @@ public class TestPerson {
 
     }
 
+    @Test
+    public void printPersonOlderThan(){
+        //GIVEN
+        List<Person> listina = new ArrayList<>();
+        Person jhope = new Person("hobi", cumple2, Person.Sex.MALE, "cute@email" );
+       //WHEN
+        Person.printPersonsOlderThan(listina, 20);
+        //THEN
+        Assert.assertTrue(jhope.getAge() > 21);
+
+
+    }
+
 }
