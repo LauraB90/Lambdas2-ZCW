@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
 
 public class Person {
 
@@ -78,5 +79,22 @@ public class Person {
                 ", gender=" + gender +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public void printPerson(){
+        String person = "Name: %s Birthday: %s Email: %s Gender: %s";
+        person = String.format(person, getName(), getBirthdate(), getEmail(), getGender());
+        System.out.println(person);
+
+    }
+
+
+    public static void printPersonsWithinAgeRange(
+            List<Person> roster, int low, int high) {
+        for (Person p : roster) {
+            if (low <= p.getAge() && p.getAge() < high) {
+                p.printPerson();
+            }
+        }
     }
 }
